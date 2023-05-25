@@ -290,6 +290,14 @@ function handleCreated(event) {
       maximumFractionDigits: 2,
     });
   forecastData.CreatedForecast = val;
+  forecastHead.textContent = (
+    forecastData.ClosedForecast +
+    forecastData.CreatedForecast +
+    forecastData.ForecastForecast +
+    forecastData.PulledForecast
+  ).toLocaleString('en-US', {
+    maximumFractionDigits: 2,
+  });
 }
 function handlePulled(event) {
   let val = +event.target.value;
@@ -299,6 +307,14 @@ function handlePulled(event) {
       maximumFractionDigits: 2,
     });
   forecastData.PulledForecast = val;
+  forecastHead.textContent = (
+    forecastData.ClosedForecast +
+    forecastData.CreatedForecast +
+    forecastData.ForecastForecast +
+    forecastData.PulledForecast
+  ).toLocaleString('en-US', {
+    maximumFractionDigits: 2,
+  });
 }
 
 createdVal.addEventListener('change', handleCreated);
