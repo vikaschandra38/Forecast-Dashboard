@@ -97,6 +97,7 @@ h2 > span {
 
 .insight-cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   flex: 1 0 0;
 }
